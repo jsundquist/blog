@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block nav %}
+    <ul class="nav">
+        {% for item in nav %}
+            {% if item.title == active %}
+                <li class="active"><a href="{{ item.link }}">{{ item.title }}</a></li>
+            {% else %}
+                <li><a href="{{ item.link }}">{{ item.title }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+{% block breadcrumbs %}
+<ul class="breadcrumb">
+    {% for key,value in breadcrumbs %}
+        {% if key %}
+            <li><a href="{{ key }}">{{ value }}</a> <span class="divider">></span></li>
+        {% else %}
+            <li class="active">{{ value }}</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+{% endblock %}
+
+
+{% block body %}
+    {% for post in posts %}
+        <!-- Start Blog Post -->
+        <div class="row-fluid">
+            <div class="span12">
+                <h2><a href="/blog/view/{{ post.post_name }}">{{ post.post_title }}</a></h2>
+                <p>{{ post.post_date|date("m/d/Y g:i A") }}</p>
+                {{ post.post_excert|raw|nl2br }}
+                <p>&nbsp;</p>
+                <p><a href="/blog/view/{{ post.post_name }}" class="btn btn-mini btn-primary">Read More</a></p>
+            </div>
+        </div>
+        <!-- End Blog Post -->
+    {% endfor %}
+{% endblock %}
+
+{% block blogroll %}
+    <ul class="unstyled">
+    {% for post in previousPosts %}
+        <li><a href="/blog/view/{{ post.post_name }}">{{ post.post_title }}</a></li>
+    {% endfor %}
+    </ul>
+{% endblock %}

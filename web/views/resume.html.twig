@@ -1,0 +1,257 @@
+{% extends "base.html.twig" %}
+{% block nav %}
+    <ul class="nav">
+    {% for item in nav %}
+        {% if item.title == active %}
+        <li class="active"><a href="{{ item.link }}">{{ item.title }}</a></li>
+        {% else %}
+        <li><a href="{{ item.link }}">{{ item.title }}</a></li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+{% endblock %}
+
+{% block body %}
+    <div class="row-fluid">
+    <div class="span12">
+        A knowledgeable web developer with experience ranging from front-end to back-end utilizing state-of-the-art technologies to create and maintain web applications and websites from start to finish.  Over ten years of experience utilizing image editing software, PHP, MySQL, XHTML, Flash, and Linux as well as various other software and related technologies.
+        <h3>Technical Core Competencies:</h3>
+        <div class="row-fluid">
+            <div class="span12">
+                <h4>Databases:</h4>
+                <div class="row-fluid">
+                    <div class="span6">
+                        <ul>
+                            <li>MySQL</li>
+                            <li>Oracle</li>
+                        </ul>
+                    </div>
+                </div>
+                <h4>Development Software:</h4>
+                <div class="row-fluid">
+                    <div class="span6">
+                        <ul>
+                            <li>PHPMyAdmin </li>
+                            <li>Adobe Dreamweaver</li>
+                            <li>Adobe Flash</li>
+                            <li>Eclipse IDE</li>
+                        </ul>
+                    </div>
+                    <div class="span6">
+                        <ul>
+                            <li>Aptana</li>
+                            <li>Zend Studio</li>
+                            <li>Titanium Studio</li>
+                            <li>IntelliJ IDEA</li>
+                        </ul>
+                    </div>
+                </div>
+                <h4>Office Suites:</h4>
+                <div class="row-fluid">
+                    <div class="span6">
+                        <ul>
+                            <li>Microsoft office</li>
+                        </ul>
+                    </div>
+                    <div class="span6">
+                        <ul>
+                            <li>Open Office</li>
+                        </ul>
+                    </div>
+                </div>
+                <h4>Operating Systems:</h4>
+                <div class="row-fluid">
+                    <div class="span6">
+                        <ul>
+                            <li>Microsoft Windows (Windows 98, Windows 2000, Windows XP, Windows 7)</li>
+                            <li>Mac OS X 10.5-10.7</li>
+                        </ul>
+                    </div>
+                    <div class="span6">
+                        <ul>
+                            <li>Linux</li>
+                        </ul>
+                    </div>
+                </div>
+                <h4>Web Services:</h4>
+                <div class="row-fluid">
+                    <div class="span6">
+                        <ul>
+                            <li>IIS</li>
+                        </ul>
+                    </div>
+                    <div class="span6">
+                        <ul>
+                            <li>Apache</li>
+                        </ul>
+                    </div>
+                </div>
+                <h4>Version Controll:</h4>
+                <div class="row-fluid">
+                    <div class="span6">
+                        <ul>
+                            <li>Subversion</li>
+                            <li>Git</li>
+                        </ul>
+                    </div>
+                    <div class="span6">
+                        <ul>
+                            <li>Mercurial</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row-fuild">
+    <div class="span12">
+        <h3>Professional Experience</h3>
+        <!-- begin position -->
+        <div class="row-fuild">
+            <div class="span12">
+                <h4>Merrill Corporation</h4>
+                <div class="row-fuild">
+                    <div class="span6">St. Paul, MN</div>
+                    <div class="span6">May 2012 – Present</div>
+                </div>
+                <div class="row-fuild">
+                    <div class="span12">
+                        Senior Software Developer
+                        <ul>
+                            <li>Work with a large team to create a production ready product to be delivered to production at the end of each sprint</li>
+                            <li>Represented my team in the scrum of scrums daily meeting</li>
+                            <li>Researched and resolved issues related to Mac OS X 10.6 and Mac OS X 10.7 in relation to Java applets</li>
+                            <li>Discussed and implemented new UI designs provided by our user experience designers</li>
+                        </ul>
+                        <strong>Environment:</strong> ExtJS 3, IntelliJ IDEA, Mercurial, Jenkins, Ant, Maven, Java, Microsoft TFS
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end position -->
+        <!-- begin position -->
+        <div class="row-fuild">
+            <div class="span12">
+                <h4>Interactive Data</h4>
+                <div class="row-fuild">
+                    <div class="span6">Minneapolis, MN</div>
+                    <div class="span6">March 2012 - April 2012</div>
+                </div>
+                <div class="row-fuild">
+                    <div class="span12">
+                        Lead Frontend Software Engineer (October 2011 - April 2012)
+                        <ul>
+                            <li>Managed a team of eight on shore developers frontend engineers</li>
+                            <li>Coordinated development efforts between both on shore and off shore development teams</li>
+                            <li>Delegated production and maintenance tickets out to the frontend developers</li>
+                            <li>Provided high level estimates to help determine how much to charge for new development projects</li>
+                            <li>Set up a code review utility in order to better align and institute code standards through out the frontend and off shore teams</li>
+                            <li>Helped develop and institute work flows within our Jira ticket management system</li>
+                            <li>Recommend new software in order to streamline our project life cycle</li>
+                            <li>Maintain and upgraded a common middle tier library used by all of the php5 projects</li>
+                        </ul>
+                    </div>
+                </div>
+                 <div class="row-fuild">
+                    <div class="span12">
+                        Software Engineer (March 2012- September 2011)
+                        <ul>
+                            <li>Worked on multiple projects at once while also resolving production tickets within a timely manor</li>
+                            <li>Maintain and upgraded a common middle tier library used by all of the php5 projects</li>
+                            <li>Worked a long side project managers in order to gather requirements and suggest ways to implement the content</li>
+                            <li>Created an iPhone application using Appeclerator’s Titanium and released it to the Apple app store</li>
+                            <li>Recommended and helped improve our php5 server clusters by implementing better caching of static files</li>
+                        </ul>
+                        <strong>Environment:</strong> Zend Framework, jQuery, PHP5, MySQL, Linux, Internet Explorer, Firefox, Aptana, Titanium Studio, Jira, Confluence, Crucible, Fisheye
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end position -->
+        <!-- begin position -->
+        <div class="row-fuild">
+            <div class="span12">
+                <h4>Visible Customer</h4>
+                <div class="row-fuild">
+                    <div class="span6">Plymouth, MN</div>
+                    <div class="span6">March 2009 - March 2010</div>
+                </div>
+                <div class="row-fuild">
+                    <div class="span12">
+                        Application Developer
+                        <ul>
+                            <li>Worked with a team to create an internal web application used to market to customers of car dealerships</li>
+                            <li>Made use of an svn server to revision files</li>
+                            <li>Helped maintain MySQL stored procedures and functions</li>
+                            <li>Worked within a small team to design and develop a secure web portal for car dealerships to login, view details </li>pertaining to their customers and marketing campaigns going out on their behalf</li>
+                        </ul>
+                        <strong>Environment:</strong> CakePHP MVC Framework, ExtJs, jQuery, PHP, MySQL, LINUX, Internet Explorer 7/8, Firefox 3, Adobe Dreamweaver CS4, Aptana, Eclipse IDE, SqlYog, &amp; Adobe Photoshop CS4.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end position -->
+        <!-- begin position -->
+        <div class="row-fuild">
+            <div class="span12">
+                <h4>TDX Tech</h4>
+                <div class="row-fuild">
+                    <div class="span6">Bloomington, MN</div>
+                    <div class="span6">August 2006 - Febuary 2009</div>
+                </div>
+                <div class="row-fuild">
+                    <div class="span12">
+                        Web Developer / Repair Technician
+                        <ul>
+                            <li>Created a website for the company using PHP and MySQL to allow for ease of enhancements and scalability</li>
+                            <li>Created and maintained an intranet system in PHP and MySQL used to track repair orders and advanced exchange orders for both internal employees and external customers</li>
+                            <li>Installed and configured Peachtree 2007 accounting software by Sage for a server client environment</li>
+                        </ul>
+                        <strong>Environment:</strong> PHP, MySQL, LINUX, Windows Server 2003, Internet Explorer 7, Firefox, &amp; Adobe Dreamweaver CS4
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end position -->
+        <!-- begin position -->
+        <div class="row-fuild">
+            <div class="span12">
+                <h4>Hanelinus, Inc</h4>
+                <div class="row-fuild">
+                    <div class="span6">Eagan, MN</div>
+                    <div class="span6">June 2005 - August 2006</div>
+                </div>
+                <div class="row-fuild">
+                    <div class="span12">
+                        Web Developer / Network Technician
+                        <ul>
+                            <li>Rewired LAN to optimize data integrity and minimal data loss</li>
+                            <li>Installed, configured, and maintained both LAMP and Windows-based servers</li>
+                            <li>Redesigned and implemented a new shopping cart website using PHP 4 and MySQL 4</li>
+                            <li>Created an intranet website using PHP 4 and MySQL 4 for tracking repair orders</li>
+                            <li>Managed and supported Windows-based desktops</li>
+                        </ul>
+                        <strong>Environment:</strong> PHP 4, MySQL4, Linux, Windows 2003 Small Business Server, Windows XP Professional, Macromedia Dreamweaver 8, &amp; Macromedia Fireworks 8
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end position -->
+    </div>
+</div>
+<div class="row-fuild">
+    <div class="span12">
+        <h3>Education</h3>
+        <strong>Associated of Applied Science - Web Programming</strong>, Hennepin Technical College
+    </div>
+</div>
+{% endblock %}
+
+{% block blogroll %}
+    <ul class="unstyled">
+        {% for post in previousPosts %}
+            <li><a href="/web/index.php/blog/view/{{ post.post_name }}">{{ post.post_title }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

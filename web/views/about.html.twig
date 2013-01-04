@@ -1,0 +1,43 @@
+{% extends "base.html.twig" %}
+{% block nav %}
+    <ul class="nav">
+    {% for item in nav %}
+        {% if item.title == active %}
+        <li class="active"><a href="{{ item.link }}">{{ item.title }}</a></li>
+        {% else %}
+        <li><a href="{{ item.link }}">{{ item.title }}</a></li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+{% endblock %}
+
+{% block body %}
+<div class="row-fluid">
+    <div class="span12">
+        <p>Hello, my name is Jonathan Sundquist.  I am a web developer in the Minneapolis / St. Paul area. I have been creating web sites and applications for the past 9 years ranging from a small single page web site to a full marketing application. </p>
+        <p>I love spending my free time learning new techniques and technologies. I'm an active member and event organizer of the <a href="http://www.mnphp.org/" target="_blank">Minnesota PHP User Group</a> and co-organizer of the <a href="http://www.midwestphp.org" target="_blank">MidwestPHP</a> conference.</p>
+        <p>When I am not tinkering with the web, learning some new technology, or partisipating at a user group meet up you will find me at home, playing with my #1 son, grilling or smoking some delicious food, or just spending some time with my wonderful wife.</p>
+        <!-- Open source, php, new technologies, problem solver, husband, father, mnphpug, midwestphp, javascript developer-->
+    </div>
+</div>
+{% endblock %}
+
+{% block blogroll %}
+    <ul class="unstyled">
+        {% for post in previousPosts %}
+            <li><a href="/blog/view/{{ post.post_name }}">{{ post.post_title }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+{% block breadcrumbs %}
+<ul class="breadcrumb">
+    {% for key,value in breadcrumbs %}
+        {% if key %}
+            <li><a href="{{ key }}">{{ value }}</a> <span class="divider">></span></li>
+        {% else %}
+            <li class="active">{{ value }}</li>
+        {% endif %}
+    {% endfor %}
+ </ul>
+ {% endblock %}

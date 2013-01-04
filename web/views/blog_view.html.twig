@@ -1,0 +1,45 @@
+{% extends "base.html.twig" %}
+{% block nav %}
+    <ul class="nav">
+    {% for item in nav %}
+        {% if item.title == active %}
+        <li class="active"><a href="{{ item.link }}">{{ item.title }}</a></li>
+        {% else %}
+        <li><a href="{{ item.link }}">{{ item.title }}</a></li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+{% endblock %}
+
+{% block breadcrumbs %}
+<ul class="breadcrumb">
+    {% for key,value in breadcrumbs %}
+        {% if key %}
+        <li><a href="{{ key }}">{{ value }}</a> <span class="divider">></span></li>
+        {% else %}
+        <li class="active">{{ value }}</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+{% endblock %}
+
+{% block body %}
+    <!-- Start Blog Post -->
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>{{ post.post_title }}</h2>
+            <p>{{ post.post_date|date("m/d/Y g:i A") }}</p>
+            {{ post.post_content|raw|nl2br }}
+        </div>
+    </div>
+    <!-- End Blog Post -->                                                                                                                                    
+{% endblock %}
+
+{% block blogroll %}
+    <ul class="unstyled">
+        {% for post in previousPosts %}
+            <li><a href="/web/index.php/blog/view/{{ post.post_name }}">{{ post.post_title }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+

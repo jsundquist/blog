@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Ramblings of @jsundquist</title>
+    <!--[if ie]><meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1"><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/css/footer.css" rel="stylesheet">
+</head>
+<body>
+    <div id="wrap">
+        <div class="container-fluid">
+            <header>
+                <div class="row-fluid">
+                    <div class="span8">
+                        <h1>Ramblings of @jsundquist</h1>
+                    </div>
+                    <div class="span4">
+                        <div class="pull-right visible-desktop">
+                            <a href="http://www.linkedin.com/in/jonathansundquist" target="_blank">LinkedIn</a> | <a href="http://twitter.com/jsundquist" target="_blank">Twitter</a> | <a href="http://mojolive.com/profile/jsundquist" target="_blank">MojoLive</a>
+                        </div>
+                        <div class="hidden-desktop">
+                            <a href="http://www.linkedin.com/in/jonathansundquist" target="_blank">LinkedIn</a> | <a href="http://twitter.com/jsundquist" target="_blank">Twitter</a> | <a href="http://mojolive.com/profile/jsundquist" target="_blank">MojoLive</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar">
+                    <nav class="navbar-inner">
+                        <div class="container">
+                            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </a>
+                            <div class="nav-collapse collapse">
+                                {% block nav %}
+                                <ul class="nav">
+                                    <li class="active"><a href="/">Home</a></li>
+                                    <li><a href="/blog">Blog</a></li>
+                                    <li><a href="/about">About</a></li>
+                                    <li><a href="/contact">Contact</a></li>
+                                    <li><a href="/resume">Resume</a></li>
+                                </ul>
+                                {% endblock %}
+                            </div><!--/.nav-collapse -->
+                        </div>
+                    </nav>
+                </div>
+            </header>
+        
+            <div class="row-fluid">
+                <div class="span8">
+                    {% block breadcrumbs %}
+                        <ul class="breadcrumb">
+                            <li class="active">Home</li>
+                        </ul>
+                    {% endblock %}
+                    {% block body %}{% endblock %}
+                </div>
+                <div class="well span4">
+                    <div class="previousPosts">
+                        <h4>Previous Entries</h4>
+                        <div style="padding-left: 15px;">
+                            {% block blogroll %}{% endblock %}
+                        </div>
+                    </div>
+                    <div class="">
+                        <h4>External Blogs</h4>
+                        <div style="padding-left:15px;">
+                            <ul class="unstyled">
+                                <li><a href="http://mwop.net" target="_blank">matthew weier o'phinney</a></li>
+                                <li><a href="http://www.littlehart.net/atthekeyboard/" target="_blank">@TheKeyboard</a></li>
+                                <li><a href="http://jmather.com/" target="_blank">It's Majax</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="">
+                        <h4>Podcasts</h4>
+                        <div style="padding-left:15px;">
+                            <ul class="unstyled">
+                                <li><a href="http://devhell.info" target="_blank" alt="/dev/hell">/dev/hell</a></li>
+                                <li><a href="http://voicesoftheelephpant.com/" target="_blank">Voices of the Elephpant</a></li>
+                                <li><a href="http://phptownhall.com/" target="_blank">PHP Town Hall</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="push"></div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span6"><p>Copyright &copy; 2012</p></div>
+                <div class="span6">
+                    <div class="pull-right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
+</body>
+</html>
